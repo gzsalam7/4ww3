@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ghazi Salam">
+    <meta name="description" content="4WW3 Rating App">
+    <meta name="keywords" content="HTML,CSS">
+    <title>Parks & Rec</title>
+</head>
+<body>
+ <div class="header">
+    <a href="index.html"><strong>Parks & Rec</strong></a>
+     <nav class="nav">
+        <a href="search.html">Search</a>
+        <a href="review.html">Review</a>
+        <a href="login_signup.html">Login/Signup</a>
+     </nav>
+ </div>
+ <div>
+     <h1>Submit a Review</h1>
+     <p>Parks & Rec needs user submitted reviews as its lifeblood. If you have found a new
+         park and wish to submit its details then please enter the name, location, activities
+         and review of the park below. If the park is a new park then we will review the
+         submission and add it to our databse and you will get credit. If the park exists
+         then your review will be added to the parks page and will help inform other users
+         if the park is a great place to go or not!
+     </p>
+     <form action="review">
+         Name: <input type="text" name="name" required> <br>
+         Latitude: <input type="number" name="latitude" required> <br>
+         Longitude: <input type="number" name="longitude" required> <br>
+         <fieldset>
+             <legend>What type of park is it?</legend>
+             <input type="radio" name="parkType" value="dog" required>Dog <br>
+             <input type="radio" name="parkType" value="chlidrens" required>Children's <br>
+             <input type="radio" name="parkType" value="exercise" required>Excercise <br>
+             <input type="radio" name="parkType" value="trails" required>Trails <br>
+             <input type="radio" name="parkType" value="national" required>National <br>
+         </fieldset>
+        Activities: <input type="text" name="activities"> <br>
+        Facilities: <input type="text" name="facilities"> <br>
+        Review: <input type="text" name="Review" required> <br>
+        Rating (1-5) <input type="number" name="Rating" min="1" max="5" required> <br>
+        Upload an Image: <br> <input type="file" name="Image" accept="image/png, image/jpeg"> <br>
+        <input type="submit" value="Submit">
+     </form>
+ </div>
+ <div class="footer">
+    <p>Project by Ghazi Salam</p>
+    <p>Created for McMaster 4WW3</p>
+ </div>
+
+
+
+
+
+</body>
+</html>
+
+<style>
+/* body {
+    background-image: url(forestBackground.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border: 2px dashed #333;
+    opacity: 0.2;
+} */
+.nav {
+    float: right;
+    margin: 10px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: lightgreen ;
+  color: white;
+  text-align: center;
+  opacity: 0.6;
+}
+</style>

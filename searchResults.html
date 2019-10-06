@@ -1,99 +1,86 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/searchResults.css">
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Ghazi Salam">
     <meta name="description" content="4WW3 Rating App">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML,CSS">
     <title>Parks & Rec</title>
 </head>
+
 <body>
- <div class="header">
-    <a href="index.html"><strong>Parks & Rec</strong></a>
-     <nav class="nav">
-        <a href="search.html">Search</a>
-        <a href="review.html">Review</a>
-        <a href="login_signup.html">Login/Signup</a>
-     </nav>
- </div>
- <div class="container table-responsive">
-    <h2>Search Results</h2>
-    <p>Your search returned 3 results</p>            
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Latitude - Longitude</th>
-          <th>Type</th>
-          <th>Rating</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><a href="park.html">Green Hills Park</a></td>
-          <td> 100 / - 120</td>
-          <td>Trail</td>
-          <td>3.5/5</td>
-        </tr>
-        <tr>
-          <td><a href="park.html">El Dorado Park</a></td>
-          <td>0 / 0</td>
-          <td>Trail</td>
-          <td>5/5</td>
-        </tr>
-        <tr>
-          <td><a href="park.html">Doggie Heaven Hills</a></td>
-          <td> 95.7 / -10.21</td>
-          <td>Dog</td>
-          <td>4/5</td>
-        </tr>
-        <tr>
-            <td><a href="park.html">Public LandFill Sandlot</a></td>
-            <td>20.25 / 21.22</td>
-            <td>Children's</td>
-            <td>2/5</td>
-        </tr>
-      </tbody>
-    </table>
-    <br>
-    <img alt="Picture of park locations on map" src="parksSearchLoc.PNG">
-  </div>
- <div class="footer">
-    <p>Project by Ghazi Salam</p>
-    <p style="margin: 16px 0px 0px 0px;">Created for McMaster 4WW3</p>
- </div>
-
-
-
-
+    <div class="flex-wrapper">
+        <nav class="navbar navbar-expand-sm bg-light">
+            <a class="navbar-brand" href="index.html">Parks & Rec</a>
+            <ul class="navbar-nav ml-auto" style="float: right;">
+                <a class="navbar-brand" href="index.html">Parks & Rec</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="search.html">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="review.html">Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login_signup.html">Login/Signup</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container table-responsive content">
+            <div class="col-8 offset-2">
+                <h2>Search Results</h2>
+                <p>Your search returned 4 results</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Latitude - Longitude</th>
+                            <th>Type</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="park.html">Green Hills Park</a></td>
+                            <td> 100 / - 120</td>
+                            <td>Trail</td>
+                            <td>3.5/5</td>
+                        </tr>
+                        <tr>
+                            <td><a href="park.html">El Dorado Park</a></td>
+                            <td>0 / 0</td>
+                            <td>Trail</td>
+                            <td>5/5</td>
+                        </tr>
+                        <tr>
+                            <td><a href="park.html">Doggie Heaven Hills</a></td>
+                            <td> 95.7 / -10.21</td>
+                            <td>Dog</td>
+                            <td>4/5</td>
+                        </tr>
+                        <tr>
+                            <td><a href="park.html">Public LandFill Sandlot</a></td>
+                            <td>20.25 / 21.22</td>
+                            <td>Children's</td>
+                            <td>2/5</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <img alt="Picture of park locations on map" src="assets/parksSearchLoc.PNG" class="col-8 offset-2">
+                <br> <br>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Project by Ghazi Salam</p>
+            <p style="margin: 0;">Created for McMaster 4WW3</p>
+        </div>
+    </div>
 
 </body>
-</html>
 
-<style>
-/* body {
-    background-image: url(forestBackground.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    border: 2px dashed #333;
-    opacity: 0.2;
-} */
-.nav {
-    float: right;
-    margin: 10px;
-}
-.footer {
-  position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: lightgreen ;
-  color: white;
-  text-align: center;
-  opacity: 0.6;
-}
-</style>
+</html>

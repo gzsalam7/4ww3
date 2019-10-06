@@ -1,81 +1,74 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/search.css">
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Ghazi Salam">
     <meta name="description" content="4WW3 Rating App">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML,CSS">
     <title>Parks & Rec</title>
 </head>
+
 <body>
- <div class="header">
-    <a href="index.html"><strong>Parks & Rec</strong></a>
-     <nav class="nav">
-        <a href="search.html">Search</a>
-        <a href="review.html">Review</a>
-        <a href="login_signup.html">Login/Signup</a>
-     </nav>
- </div>
- <div>
-     <h1>Search for a Park</h1>
-     <form action="searchResults.html" method="GET">
-         Name: <input type="text" name="name" > <br>
-         Latitude range: <input type="number" name="latitude" placeholder="(100.0-200.0)" > <br>
-         Longitude range: <input type="number" name="longitude" placeholder="(100.0-200.0)" > <br>
-         <fieldset>
-             <legend>What type of park do you want to go to?</legend>
-             <input type="radio" name="parkType" value="dog" >Dog <br>
-             <input type="radio" name="parkType" value="chlidrens" >Children's <br>
-             <input type="radio" name="parkType" value="exercise" >Excercise <br>
-             <input type="radio" name="parkType" value="trails" >Trails <br>
-             <input type="radio" name="parkType" value="national" >National <br>
-         </fieldset>
-         <label for="rating">Maximum rating?</label>
-         <select name="rating">
-             <option value="1">One Stars</option>
-             <option value="2">Two Stars</option>
-             <option value="3">Three Stars</option>
-             <option value="4">Four Stars</option>
-             <option value="5">Five Stars</option>
-         </select>
-        <input type="submit" name="Submit" >
-     </form>
- </div>
- <div class="footer">
-    <p>Project by Ghazi Salam</p>
-    <p>Created for McMaster 4WW3</p>
- </div>
+    <div class="flex-wrapper">
+        <nav class="navbar navbar-expand-sm bg-light">
+            <a class="navbar-brand" href="index.html">Parks & Rec</a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="search.html">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="review.html">Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login_signup.html">Login/Signup</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container content">
+            <div class="col-8 offset-2 form-group">
+                <h1>Search for a Park</h1>
+                <form action="searchResults.html" method="GET">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control">
+                    <label for="latitude">Latitude</label>
+                    <input type="number" name="latitude" placeholder="(100.0-200.0)" class="form-control">
+                    <label for="longitude">Longitdue</label>
+                    <input type="number" name="longitude" placeholder="(100.0-200.0)" class="form-control"> <br>
+                    <fieldset class="form-check">
+                        <legend>What type of park do you want to go to?</legend>
+                        <input type="radio" name="parkType" value="dog">Dog <br>
+                        <input type="radio" name="parkType" value="chlidrens">Children's <br>
+                        <input type="radio" name="parkType" value="exercise">Excercise <br>
+                        <input type="radio" name="parkType" value="trails">Trails <br>
+                        <input type="radio" name="parkType" value="national">National
+                    </fieldset>
+
+                    <label for="rating">Maximum rating?</label>
+                    <select name="rating" class="form-control">
+            <option value="1">One Stars</option>
+            <option value="2">Two Stars</option>
+            <option value="3">Three Stars</option>
+            <option value="4">Four Stars</option>
+            <option value="5">Five Stars</option>
+          </select>
+                    <br>
+                    <input type="submit" name="Submit" class="btn btn-primary">
+                    <br> <br>
 
 
-
-
-
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Project by Ghazi Salam</p>
+            <p style="margin: 0;">Created for McMaster 4WW3</p>
+        </div>
+    </div>
 </body>
-</html>
 
-<style>
-/* body {
-    background-image: url(forestBackground.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    border: 2px dashed #333;
-    opacity: 0.2;
-} */
-.nav {
-    float: right;
-    margin: 10px;
-}
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: lightgreen ;
-  color: white;
-  text-align: center;
-  opacity: 0.6;
-}
-</style>
+</html>

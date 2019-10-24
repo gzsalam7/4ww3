@@ -5,6 +5,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="css/footer.css">
 <link rel="stylesheet" href="css/login_signup.css">
+<script src="js/login_signup.js"></script>
 <html>
 
 <head>
@@ -24,42 +25,41 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="topNav">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="search.html">Search</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="review.html">Review</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="login_signup.html">Login/Signup</a>
-                </li>
-              </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="review.html">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login_signup.html">Login/Signup</a>
+                    </li>
+                </ul>
             </div>
-          </nav>
+        </nav>
         <div class="container content">
             <div class="col-8 offset-2">
                 <h1>Login</h1>
-                <form action="login">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" name="username" required>
-                    <label for="password">Password</label><input type="password" class="form-control" name="password" required> <br>
+                <form name="login" onsubmit="return validateLogin()">
+                    <label for="username">Username</label><input type="text" class="form-control" name="username">
+                    <label for="password">Password</label><input type="password" class="form-control" name="password"> <br>
                     <input type="submit" class="btn btn-primary" value="Login">
                 </form>
             </div>
             <div class="col-8 offset-2">
                 <h1>Signup</h1>
-                <form action="signup">
+                <form name="signup" onsubmit="return validateSignup()">
                     <label for="firstName">First Name</label>
-                    <input type="text" class="form-control" name="firstName" required>
+                    <input type="text" class="form-control" name="firstName">
                     <label for="lastName">Last Name</label>
-                    <input type="text" class="form-control" name="lastName" required>
+                    <input type="text" class="form-control" name="lastName">
                     <label for="username">Username</label>
-                    <input type="text" class="form-control" name="username" required>
+                    <input type="text" class="form-control" name="username">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" name="email" required>
+                    <input type="text" class="form-control" name="email">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" name="password" required> <br>
+                    <input type="password" class="form-control" name="password"> <br>
                     <input type="submit" class="btn btn-primary" value="Signup"> <br> <br>
                 </form>
             </div>

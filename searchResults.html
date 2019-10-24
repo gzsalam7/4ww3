@@ -3,6 +3,9 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/searchResults.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBH6TOru9hffd2ZXL6mHRH05xPxiRPYHcA&callback=initMap">
+</script>
 <link rel="stylesheet" href="css/footer.css">
 <link rel="stylesheet" href="css/searchResults.css">
 <html>
@@ -24,19 +27,19 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="topNav">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="search.html">Search</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="review.html">Review</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="login_signup.html">Login/Signup</a>
-                </li>
-              </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="review.html">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login_signup.html">Login/Signup</a>
+                    </li>
+                </ul>
             </div>
-          </nav>
+        </nav>
         <div class="container table-responsive content">
             <div class="col-8 offset-2">
                 <h2>Search Results</h2>
@@ -78,7 +81,7 @@
                     </tbody>
                 </table>
                 <br>
-                <img alt="Picture of park locations on map" src="assets/parksSearchLoc.PNG" class="col-8 offset-2">
+                <div class="col-8 offset-2" id="map"></div>
                 <br> <br>
             </div>
         </div>

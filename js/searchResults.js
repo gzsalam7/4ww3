@@ -1,25 +1,26 @@
+//  function to add map to searchResults with all the markers of the returned results
 function initMap() {
 
     var start = { lat: 43.249815, lng: -79.914312 };
-
+    // creates new map at id map element on page
     var map = new google.maps.Map(
         document.getElementById('map'), { zoom: 11, center: start });
-
+    // adds new marker at position start with a name and link
     var greenHills = new google.maps.Marker({
-        position: start,
-        map: map,
-        title: "Green Hills Park",
-        link: "park.html"
-    })
+            position: start,
+            map: map,
+            title: "Green Hills Park",
+            link: "park.html"
+        }) // adds listener for a click and open an infowindow
     greenHills.addListener('click', function() {
         infowindowGreen.open(map, greenHills);
-    });
+    }); // infowindow shows content which is a link with the name and rating
     var greenContent = "<a href=park.html>" + greenHills.title + "</a> </br> <strong>Type: </strong>Trail </br><strong>Rating: </strong>3.5"
     var infowindowGreen = new google.maps.InfoWindow({
         content: greenContent,
         maxWidth: 200
     });
-
+    // added 3 more markers below
     var elDorado = new google.maps.Marker({
         position: { lat: 43.24, lng: -79.99 },
         map: map,

@@ -1,3 +1,5 @@
+// function used to validate login,checks if string is null or empty otherwise allows strings
+// for the login form
 function validateLogin() {
     const user = document.forms["login"]["username"].value;
     if (user == "" || user == null) {
@@ -11,6 +13,7 @@ function validateLogin() {
     }
 }
 
+// same as above checks if strings are empty or null and alerts if they are
 function validateSignup() {
     const firstName = document.forms["signup"]["firstName"].value;
     if (firstName == "" || firstName == null) {
@@ -27,6 +30,7 @@ function validateSignup() {
         alert("You have to enter a username");
         return false;
     }
+    // this one uses a regex to make sure the email is in proper format before alerting
     const email = document.forms["signup"]["email"].value;
     if (!(/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/.test(email)) || email == null) {
         alert("Enter a valid email address");

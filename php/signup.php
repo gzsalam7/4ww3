@@ -12,5 +12,14 @@
     $response = '';
     if ($response=$dbc->query($query)) {
         $result = "review submit";
+        echo ("<script LANGUAGE='JavaScript'>
+          window.alert('Signup Successful');
+          window.location.href='../index.html';
+          </script>");
+    } else {
+        echo ("<script LANGUAGE='JavaScript'>
+          window.alert('Signup Unsuccessful. Try again');
+          window.location.href='../login_signup.html';
+          </script>");
     }
 ?>

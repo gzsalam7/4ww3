@@ -41,7 +41,7 @@
         <div class="container content">
             <div class="col-8 offset-2">
                 <h1>Login</h1>
-                <form name="login" onsubmit="return validateLogin()">
+                <form name="login" onsubmit="return validateLogin()" method="POST" action="php/login.php">
                     <label for="username">Username</label><input type="text" class="form-control" name="username">
                     <label for="password">Password</label><input type="password" class="form-control" name="password"> <br>
                     <input type="submit" class="btn btn-primary" value="Login">
@@ -49,7 +49,7 @@
             </div>
             <div class="col-8 offset-2">
                 <h1>Signup</h1>
-                <form name="signup" onsubmit="return validateSignup()">
+                <form name="signup" onsubmit="return validateSignup()" method="POST" action="php/signup.php">
                     <label for="firstName">First Name</label>
                     <input type="text" class="form-control" name="firstName">
                     <label for="lastName">Last Name</label>

@@ -23,8 +23,8 @@ function validateReview() {
         alert("You have to select the type if park");
         return false;
     }
-    const Review = document.forms["review"]["Review"].value;
-    if (Review == "" || Review == null) {
+    const review = document.forms["review"]["review"].value;
+    if (review == "" || review == null) {
         alert("You have to submit a rating");
         return false;
     }

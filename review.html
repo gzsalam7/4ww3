@@ -44,7 +44,7 @@
                 <p>Parks & Rec needs user submitted reviews as its lifeblood. If you have found a new park and wish to submit its details then please enter the name, location, activities and review of the park below. If the park is a new park then we will
                     review the submission and add it to our databse and you will get credit. If the park exists then your review will be added to the parks page and will help inform other users if the park is a great place to go or not!
                 </p>
-                <form name="review" onsubmit="return validateReview()">
+                <form name="review" onsubmit="return validateReview()" method="POST" action="php/review.php">
                     <label for="name">Name</label>
                     <input type="text" name="name" class="form-control"> <br>
 
@@ -66,9 +66,9 @@
                     <input type="text" name="activities" class="form-control"> <br>
                     <label for="facilities">Facilities</label>
                     <input type="text" name="facilities" class="form-control"> <br>
-                    <label for="Review">Review</label>
-                    <input type="text" name="Review" class="form-control"> <br>
-                    <label for="Rating">Rating (1-5)</label><input type="number" name="Rating" min="1" max="5" class="form-control"> <br>
+                    <label for="review">Review</label>
+                    <input type="text" name="review" class="form-control"> <br>
+                    <label for="rating">Rating (1-5)</label><input type="number" name="rating" min="1" max="5" class="form-control"> <br>
                     <div class="input-group">
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" id="Image">
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                     <br>
-                    <input type="submit" class="btn btn-primary" value="Submit">
+                    <input type="submit" class="btn btn-primary" value="Send">
                     <br>
                     <br>
                 </form>

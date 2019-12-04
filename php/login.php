@@ -2,8 +2,8 @@
     session_start();
     require_once('connect.php');
 
-    if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-        header("location: index.html");
+    if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === true){
+        header("location: index.php");
         exit;
     }
 
@@ -20,12 +20,15 @@
           
           $_SESSION['username'] = $username;
           $_SESSION['loggedIn'] = true;
-          echo "logged in";
+          echo ("<script LANGUAGE='JavaScript'>
+          window.alert('Login Successful');
+          window.location.href='../index.php';
+          </script>");
 
         } else {
           echo ("<script LANGUAGE='JavaScript'>
           window.alert('Login Unsuccesful');
-          window.location.href='../register.html';
+          window.location.href='../login_signup.php';
           </script>");
 
         }

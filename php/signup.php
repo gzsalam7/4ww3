@@ -14,12 +14,12 @@
         $result = "review submit";
         echo ("<script LANGUAGE='JavaScript'>
           window.alert('Signup Successful');
-          window.location.href='../index.html';
+          window.location.href='../index.php';
           </script>");
     } else {
         echo ("<script LANGUAGE='JavaScript'>
           window.alert('Signup Unsuccessful. Try again');
-          window.location.href='../login_signup.html';
+          window.location.href='../login_signup.php';
           </script>");
     }
 ?>

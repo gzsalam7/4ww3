@@ -10,12 +10,12 @@ function initMap() {
             position: start,
             map: map,
             title: "Green Hills Park",
-            link: "park.html"
+            link: "park.php"
         }) // adds listener for a click and open an infowindow
     greenHills.addListener('click', function() {
         infowindowGreen.open(map, greenHills);
     }); // infowindow shows content which is a link with the name and rating
-    var greenContent = "<a href=park.html>" + greenHills.title + "</a> </br> <strong>Type: </strong>Trail </br><strong>Rating: </strong>3.5"
+    var greenContent = "<a href=park.php>" + greenHills.title + "</a> </br> <strong>Type: </strong>Trail </br><strong>Rating: </strong>3.5"
     var infowindowGreen = new google.maps.InfoWindow({
         content: greenContent,
         maxWidth: 200
@@ -29,7 +29,7 @@ function initMap() {
     elDorado.addListener('click', function() {
         infowindowEl.open(map, elDorado);
     });
-    var elContent = "<a href=park.html>" + elDorado.title + "</a> </br> <strong>Type: </strong>Trail </br><strong>Rating: </strong>5"
+    var elContent = "<a href=park.php>" + elDorado.title + "</a> </br> <strong>Type: </strong>Trail </br><strong>Rating: </strong>5"
     var infowindowEl = new google.maps.InfoWindow({
         content: elContent,
         maxWidth: 200
@@ -43,7 +43,7 @@ function initMap() {
     doggieHeaven.addListener('click', function() {
         infowindowDoggie.open(map, doggieHeaven);
     });
-    var doggieContent = "<a href=park.html>" + doggieHeaven.title + "</a> </br> <strong>Type: </strong>Dog </br><strong>Rating: </strong>4"
+    var doggieContent = "<a href=park.php>" + doggieHeaven.title + "</a> </br> <strong>Type: </strong>Dog </br><strong>Rating: </strong>4"
     var infowindowDoggie = new google.maps.InfoWindow({
         content: doggieContent,
         maxWidth: 200
@@ -57,7 +57,7 @@ function initMap() {
     landFill.addListener('click', function() {
         infowindowLand.open(map, landFill);
     });
-    var landContent = "<a href=park.html>" + landFill.title + "</a> </br> <strong>Type: </strong>Children's </br><strong>Rating: </strong>2"
+    var landContent = "<a href=park.php>" + landFill.title + "</a> </br> <strong>Type: </strong>Children's </br><strong>Rating: </strong>2"
     var infowindowLand = new google.maps.InfoWindow({
         content: landContent,
         maxWidth: 200

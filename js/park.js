@@ -10,6 +10,6 @@ function initMap() {
         position: start,
         map: map,
         title: "Green Hills Park",
-        link: "park.html"
+        link: "park.php"
     });
 }

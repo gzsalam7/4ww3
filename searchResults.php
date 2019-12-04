@@ -37,25 +37,25 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a href="park.html">Green Hills Park</a></td>
+                            <td><a href="park.php">Green Hills Park</a></td>
                             <td> 100 / - 120</td>
                             <td>Trail</td>
                             <td>3.5/5</td>
                         </tr>
                         <tr>
-                            <td><a href="park.html">El Dorado Park</a></td>
+                            <td><a href="park.php">El Dorado Park</a></td>
                             <td>0 / 0</td>
                             <td>Trail</td>
                             <td>5/5</td>
                         </tr>
                         <tr>
-                            <td><a href="park.html">Doggie Heaven Hills</a></td>
+                            <td><a href="park.php">Doggie Heaven Hills</a></td>
                             <td> 95.7 / -10.21</td>
                             <td>Dog</td>
                             <td>4/5</td>
                         </tr>
                         <tr>
-                            <td><a href="park.html">Public LandFill Sandlot</a></td>
+                            <td><a href="park.php">Public LandFill Sandlot</a></td>
                             <td>20.25 / 21.22</td>
                             <td>Children's</td>
                             <td>2/5</td>

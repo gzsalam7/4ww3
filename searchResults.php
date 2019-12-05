@@ -25,7 +25,7 @@
         <div class="container table-responsive content">
             <div class="col-8 offset-2">
                 <h2>Search Results</h2>
-                <p>Your search returned 4 results</p>
+                <br>
                 <table class="table">
                     <thead>
                         <tr>
@@ -36,30 +36,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><a href="park.php">Green Hills Park</a></td>
-                            <td> 100 / - 120</td>
-                            <td>Trail</td>
-                            <td>3.5/5</td>
-                        </tr>
-                        <tr>
-                            <td><a href="park.php">El Dorado Park</a></td>
-                            <td>0 / 0</td>
-                            <td>Trail</td>
-                            <td>5/5</td>
-                        </tr>
-                        <tr>
-                            <td><a href="park.php">Doggie Heaven Hills</a></td>
-                            <td> 95.7 / -10.21</td>
-                            <td>Dog</td>
-                            <td>4/5</td>
-                        </tr>
-                        <tr>
-                            <td><a href="park.php">Public LandFill Sandlot</a></td>
-                            <td>20.25 / 21.22</td>
-                            <td>Children's</td>
-                            <td>2/5</td>
-                        </tr>
+                        <?php if(!isset($_SESSION)) { 
+                                session_start(); 
+                            } 
+                            echo $_SESSION['results'];
+                        ?>
                     </tbody>
                 </table>
                 <br>

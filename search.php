@@ -23,7 +23,7 @@
         <div class="container content">
             <div class="col-8 offset-2 form-group">
                 <h1>Search for a Park</h1>
-                <form name="search" action="searchResults.php" method="GET">
+                <form name="search" method="POST" action="php/search.php" >
                     <label for="name">Name</label>
                     <input type="text" name="name" class="form-control">
                     <label for="latitude">Latitude</label>

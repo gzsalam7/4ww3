@@ -1,9 +1,9 @@
 // function used to validate login,checks if string is null or empty otherwise allows strings
 // for the login form
 function validateLogin() {
-    const user = document.forms["login"]["username"].value;
+    const user = document.forms["login"]["email"].value;
     if (user == "") {
-        alert("You have to fill out Username field");
+        alert("You have to fill out email field");
         return false;
     }
     const password = document.forms["login"]["password"].value;

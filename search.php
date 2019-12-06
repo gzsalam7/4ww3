@@ -33,11 +33,11 @@
                     <button type="button" onclick="getCoordinates()" class="btn btn-primary">Use Location</button> <br>
                     <fieldset class="form-check">
                         <legend>What type of park do you want to go to?</legend>
-                        <input type="radio" name="parkType" value="dog">Dog <br>
-                        <input type="radio" name="parkType" value="chlidrens">Children's <br>
-                        <input type="radio" name="parkType" value="exercise">Excercise <br>
-                        <input type="radio" name="parkType" value="trails">Trails <br>
-                        <input type="radio" name="parkType" value="national">National
+                        <input type="radio" name="parkType" value="Dog">Dog <br>
+                        <input type="radio" name="parkType" value="Chlidrens">Children's <br>
+                        <input type="radio" name="parkType" value="Exercise">Excercise <br>
+                        <input type="radio" name="parkType" value="Trails">Trails <br>
+                        <input type="radio" name="parkType" value="National">National
                     </fieldset>
 
                     <label for="rating">Maximum rating?</label>

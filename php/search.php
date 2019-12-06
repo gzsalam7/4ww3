@@ -32,19 +32,19 @@
             case '':
                 break;
             case 'dog':
-                $sql_array[] = 'parkType = dog';
+                $sql_array[] = 'parkType = Dog';
                 break;
             case 'children\'s':
-                $sql_array[] = 'parkType = children\'s';
+                $sql_array[] = 'parkType = Childrens';
                 break;
             case 'exercise':
-                $sql_array[] = 'parkType = exercise';
+                $sql_array[] = 'parkType = Exercise';
                 break;
             case 'national':
-                $sql_array[] = 'parkType = national';
+                $sql_array[] = 'parkType = National';
                 break;
             case 'trail':
-                $sql_array[] = 'parkType = trail';
+                $sql_array[] = 'parkType = Trail';
                 break;
         }
     
@@ -72,11 +72,17 @@
         while ($row = mysqli_fetch_array($response)) {
             $name = $row["name"];
 
+            $ratingQuery = ("SELECT AVG(rating) FROM reviews WHERE name='$name'");
+            $ratingResponse=$dbc->query($ratingQuery);
+            if ($ratingRow = mysqli_fetch_array($ratingResponse)) {
+                $rating = $ratingRow['AVG(rating)'];
+            }
+            
             $table .= '<tr>
-                <td><a href="park.php?name=' . urlencode($row["name"]) . '">' . $row["name"] . '</a></td>
+                <td><a href="php/park.php?name=' . urlencode($row["name"]) . '">' . $row["name"] . '</a></td>
                 <td>' . $row["latitude"] / $row["longitude"] . '</td>
                 <td>' . $row["parkType"] . '</td>
-                <td>' . 10 . '</td>
+                <td>' . $rating . '</td>
             </tr>';
         }
         $_SESSION['results'] = $table;

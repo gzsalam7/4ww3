@@ -11,10 +11,29 @@
         $facilities = $_POST['facilities'];
         $review = $_POST['review'];
         $rating = $_POST['rating'];
+        $email = $_SESSION['email'];
+
+        $checkExistsQuery = ("SELECT name FROM park WHERE name='$name'");
+        echo $checkExistsQuery;
+        if ($checkExists=$dbc->query($checkExistsQuery)) {
+          if(!($checkExists->num_rows == 0)) {
+            $reviewQuery = ("INSERT INTO reviews (email, name, review, rating) VALUES ('$email', $name', '$review', '$rating')");
+            echo $reviewQuery;
+          } else {
+            $query = ("INSERT INTO park (name, latitude, longitude, parkType, activities, facilities) VALUES ('$name', '$latitude', '$longitude', '$parkType', '$activities', '$facilities')");
+            $reviewQuery = ("INSERT INTO reviews (email, name, review, rating) VALUES ('$email', '$name', '$review', '$rating')");
+            echo $query;
+            echo $reviewQuery;
+          }
+        }
         
-        $query = ("INSERT INTO reviews (name, latitude, longitude, parkType, activities, facilities, review, rating) VALUES ('$name', '$latitude', '$longitude', '$parkType', '$activities', '$facilities', '$review', '$rating')");
         $response = '';
-        if ($response=$dbc->query($query)) {
+        if ($response=$dbc->query($reviewQuery)) {
+            if (isset($query)) {
+              if ($response=$dbc->query($query)) {
+                $result = "Park Added";
+              }
+            }
             $result = "Review Submitted";
             echo ("<script LANGUAGE='JavaScript'>
           window.alert('Thank you for your review');

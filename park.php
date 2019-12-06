@@ -23,7 +23,11 @@
     <div class="flex-wrapper">
         <?php include 'php/header.php';?>
         <div class="content">
-            <h1 class="offset-2">Green Hills Park</h1>
+            <h1 class="offset-2"><?php if (!isset($_SESSION)) {
+                                           session_start();
+                                       }
+                                       echo $_SESSION['parkName'];
+                                 ?></h1>
             <div class="row">
                 <img src="assets/park.jpg" alt="Picture of Park" class="col-sm-4 offset-2">
                 <!-- <img src="assets/parkLoc.PNG" alt="Park Location on Map pic" class="col-sm-4"> -->
@@ -32,26 +36,17 @@
             <div class="row">
                 <div class="col-4 offset-2">
                     <h3>Details</h3>
-                    <p>Latitude: 114.4</p>
-                    <p>Longitude: 114.7</p>
-                    <p>Trail Park</p>
-                    <p>Activities: Trails, Cycling, Public Classes</p>
-                    <p>Facilities: Washrooms, Bike Rental</p>
-                    <p>Rating: 3.5/5</p>
+                    <?php if (!isset($_SESSION)) {
+                                        session_start();
+                                       }
+                                       echo $_SESSION['parkDetails']; ?>
                 </div>
                 <div class="col-4">
                     <h3>Reviews</h3>
-                    <div>
-                        <h4>Clint East</h4>
-                        <p>Had a mexican standoff here. 10/10 would get shot here again</p>
-                        <strong>4/5</strong>
-                    </div>
-                    <div>
-                        <h4>Karen Manager</h4>
-                        <p>The grass is never maintained but good for kids
-                        </p>
-                        <strong>3/5</strong>
-                    </div>
+                    <?php if (!isset($_SESSION)) {
+                                        session_start();
+                                       }
+                                       echo $_SESSION['reviews']; ?>
                 </div>
             </div>
         </div>

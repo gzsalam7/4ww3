@@ -33,16 +33,16 @@
                     <label for="latitude">Latitude</label>
                     <input type="text" name="latitude" class="form-control"> <br>
                     <label for="longitude">Longitude</label>
-                    <input type="number" name="longitude" class="form-control"> <br>
+                    <input type="text" name="longitude" class="form-control"> <br>
                     <button type="button" onclick="getCoordinates()" class="btn btn-primary" style="display: inline-block;">Use Location</button>
                     <br> <br>
                     <fieldset class="form-check">
                         <legend>What type of park is it?</legend>
-                        <input type="radio" name="parkType" value="dog">Dog</label>
-                        <input type="radio" name="parkType" value="chlidrens">Children's <br>
-                        <input type="radio" name="parkType" value="exercise">Excercise <br>
-                        <input type="radio" name="parkType" value="trails">Trails <br>
-                        <input type="radio" name="parkType" value="national">National <br>
+                        <input type="radio" name="parkType" value="Dog">Dog</label>
+                        <input type="radio" name="parkType" value="Chlidrens">Children's <br>
+                        <input type="radio" name="parkType" value="Exercise">Excercise <br>
+                        <input type="radio" name="parkType" value="Trails">Trails <br>
+                        <input type="radio" name="parkType" value="National">National <br>
                     </fieldset>
                     <label for="activities">Activities</label>
                     <input type="text" name="activities" class="form-control"> <br>

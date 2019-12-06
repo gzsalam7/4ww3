@@ -8,13 +8,13 @@ function validateReview() {
     }
     // regex for a decimal or whole number only
     const latitude = document.forms["review"]["latitude"].value;
-    if (!(/^\d*\.?\d*$/.test(latitude)) || latitude == "") {
+    if (!(/^-?\d{2}(\.\d+)?$/.test(latitude)) || latitude == "") {
         alert("You have to enter a valid latitude for the park");
         return false;
     }
     // regex for a decimal or whole number only
     const longitude = document.forms["review"]["longitude"].value;
-    if (!(/^\d*\.?\d*$/.test(longitude)) || longitude == "") {
+    if (!(/^-?\d{2}(\.\d+)?$/.test(longitude)) || longitude == "") {
         alert("You have to enter a valid longitude for the park");
         return false;
     }

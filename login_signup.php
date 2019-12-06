@@ -24,7 +24,7 @@
             <div class="col-8 offset-2">
                 <h1>Login</h1>
                 <form name="login" onsubmit="return validateLogin()" method="POST" action="php/login.php">
-                    <label for="username">Username</label><input type="text" class="form-control" name="username">
+                    <label for="email">Email</label><input type="text" class="form-control" name="email">
                     <label for="password">Password</label><input type="password" class="form-control" name="password"> <br>
                     <input type="submit" class="btn btn-primary" value="Login">
                 </form>

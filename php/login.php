@@ -1,5 +1,7 @@
 <?php
-    session_start();
+    if (!isset($_SESSION)) {
+      session_start();
+    }
     require_once('connect.php');
 
     if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === true){
@@ -7,18 +9,18 @@
         exit;
     }
 
-    $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
 
     
-    $query = ("SELECT * FROM account WHERE username='$username' AND password='$password'");
+    $query = ("SELECT * FROM account WHERE email='$email' AND password='$password'");
     $response = '';
     if ($response=$dbc->query($query)) {
         if($response->num_rows == 1) {
             
           //grab logged in name and id
           
-          $_SESSION['username'] = $username;
+          $_SESSION['email'] = $email;
           $_SESSION['loggedIn'] = true;
           echo ("<script LANGUAGE='JavaScript'>
           window.alert('Login Successful');

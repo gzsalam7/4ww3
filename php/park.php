@@ -25,7 +25,7 @@
         $reviews = '';
         while ($row = mysqli_fetch_array($reviewResponse)) {
 
-            $reviews .= '<div><h2>' . $row['email'] . '</h2>
+            $reviews .= '<div><h4>' . $row['email'] . '</h4>
                         <p>' . $row['review'] . '</p>
                         <strong>' . $row['rating'] . ' / 5 </strong></div>';
         }

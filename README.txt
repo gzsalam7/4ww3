@@ -1,7 +1,7 @@
 Name: Ghazi Salam
 Num: 001431049
 Code: CS 4WW3
-Site: https://52.210.205.97/
+Site: http://cs4ww3-env.ps4cwjwdtk.eu-west-1.elasticbeanstalk.com/
 
 Github STILL said that the email doq4@mcmaster.ca doesn't have a
 github account so I was not able to add as a contributor.

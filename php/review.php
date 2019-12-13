@@ -14,35 +14,36 @@
         $email = $_SESSION['email'];
 
         $checkExistsQuery = ("SELECT name FROM park WHERE name='$name'");
+        echo $checkExistsQuery;
         if ($checkExists=$dbc->query($checkExistsQuery)) {
+          while($row = mysqli_fetch_array($checkExists))
+     {
+        print_r($row);
+     } 
           if(!($checkExists->num_rows == 0)) {
-            $reviewQuery = ("INSERT INTO reviews (email, name, review, rating) VALUES ('$email', $name', '$review', '$rating')");
+            $reviewQuery = ("INSERT INTO reviews (email, name, review, rating) VALUES ('$email', '$name', '$review', '$rating')");
           } else {
             $query = ("INSERT INTO park (name, latitude, longitude, parkType, activities, facilities) VALUES ('$name', '$latitude', '$longitude', '$parkType', '$activities', '$facilities')");
             $reviewQuery = ("INSERT INTO reviews (email, name, review, rating) VALUES ('$email', '$name', '$review', '$rating')");
           }
         }
+        
         $response = '';
-        if (isset($query)) {
-          if ($response=$dbc->query($query)) {
-            $result = "Park Added";
-          }
-        }
         if ($response=$dbc->query($reviewQuery)) {
-          $result = "Review Submitted";
-          echo $result;
-          echo ("<script LANGUAGE='JavaScript'>
-        window.alert('Thank you for your review');
-        window.location.href='../index.php';
-        </script>");
-        } else { $result = "error";}
-        while($row = mysqli_fetch_array(mysqli_query($reviewQuery))) {
-          echo $row['column_name']; // Print a single column data
-          echo print_r($row);       // Print the entire row data
+            if (isset($query)) {
+              if ($response=$dbc->query($query)) {
+                $result = "Park Added";
+              }
+            }
+            $result = "Review Submitted";
+            echo ("<script LANGUAGE='JavaScript'>
+          window.alert('Thank you for your review');
+          window.location.href='../index.php';
+          </script>");
+        }else { if (!$dbc -> query($reviewQuery)) {
+          echo("Error description: " . $dbc -> error);
+        }
       }
-
-
-
     } else {
         echo ("<script LANGUAGE='JavaScript'>
           window.alert('You must be logged in to submit a review');
